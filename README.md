@@ -32,3 +32,15 @@ There are many bugs exist but I'm fine with it.
 If anyone intrested try out.
 
 GIVE SOME LOVE TO NES DRAGON QUEST 3!
+
+------------------------------------------------------------------------------------
+
+1. Download "Dragon Warrior III Delocalized v1.12.nes" ( https://www.romhacking.net/games/121/ )
+2. Extract "Dragon Warrior III Delocalized v1.12.lua" to rom file directory.
+3. Install "dq3nes_hdpack.zip" using Mesen Emulator.
+4. Run "Dragon Warrior III Delocalized v1.12.nes" on Mesen Emulator
+5. Open Script Window (Ctrl+N) and open "Dragon Warrior III Delocalized v1.12.lua"
+6. Reset Emulator (Ctrl+R) if you want listen clear Intro music
+7. Pad1 Select key is hotkey for Map
+8. if you want use macro for search and spell, you need to remap your controller and add start and select button of gamepad2 to your controller.
+9. Done
