@@ -22,7 +22,7 @@ So I made QOL mod with Mesen HD pack and Lua script.
 My Goals:
 1. in game minimap with location indicator
 2. hot key for search and spell
-3. in game character condition indicator (Phantom, Mute, Amplified, Reflection)
+3. character condition indicator in battle (Phantom, Mute, Amplified, Reflection)
 4. and finally BGM replacement with SNES bgm (wasn't part of plan at first time)
 
 I'm not programmer and new to ROM Hack.
