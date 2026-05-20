@@ -501,5 +501,5 @@ local function drawCurrentWatchingAddress()
 end
 
 -- 중복 등록 방지 후 화면 렌더링 시점(endFrame)에 콜백 등록
-emu.addEventCallback(drawCurrentWatchingAddress, emu.eventType.endFrame)
+--emu.addEventCallback(drawCurrentWatchingAddress, emu.eventType.endFrame)
 
