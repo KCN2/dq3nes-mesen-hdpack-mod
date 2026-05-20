@@ -1,5 +1,5 @@
 # dq3-mesen-pdpack-mod
-Dragon Quest 3 NES Mod w/HD Pack and Lua Script
+Dragon Quest 3 NES Mod w/Mesen HD Pack and Lua Script
 
 Recently I replayed DQ3.
 Since I played only NES version long time ago I tried GBC version and SNES version.
