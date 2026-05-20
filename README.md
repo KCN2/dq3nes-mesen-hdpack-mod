@@ -2,11 +2,11 @@
 Dragon Quest 3 NES Mod w/HD Pack and Lua Script
 
 Recently I replayed DQ3.
-Since I player only NES version long time ago I tried GBC version and SNES version.
+Since I played only NES version long time ago I tried GBC version and SNES version.
 
 AND I FOUND OUT THERE IS HUGE DIFFERENCE BETWEEN NES VERSION AND OTHER VERSIONS.
 
-after SNES version DQ3 kinda modernized.
+After SNES version DQ3 kinda modernized.
 Smoothe balancing, QOL and new personality is nice touch.
 But it really felt like different game.
 
