@@ -23,7 +23,8 @@ My Goals:
 1. in game minimap with location indicator
 2. hot key for search and spell
 3. character condition indicator in battle (Phantom, Mute, Amplified, Reflection)
-4. and finally BGM replacement with SNES bgm (wasn't part of plan at first time)
+4. Backdrop in battle
+5. and finally BGM replacement with SNES bgm (wasn't part of plan at first time)
 
 I'm not programmer and new to ROM Hack.
 This is really hack job.
