@@ -28,7 +28,7 @@ My Goals:
 
 I'm not programmer and new to ROM Hack.
 This is really hack job.
-There are many bugs exist but I'm fine with it.
+There are many bugs exist but I'm fine with it for now. I might fix it eventually.
 
 If anyone intrested try out.
 
