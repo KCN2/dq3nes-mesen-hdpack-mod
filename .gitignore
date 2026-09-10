@@ -1,0 +1,23 @@
+﻿# NES ROM files
+*.nes
+
+# Large archives and BGM folders
+*.zip
+dq3snes_bgm/
+dq3nes_bgm/
+
+# Large raw map images
+dq3_over.png
+dq3_under.png
+*.webp
+
+# Backdrop & UI image assets (distributed via dq3_hdpack.zip in Releases)
+backdrop_*.png
+dq3sfc_*.png
+minimap*.png
+mimimap*.png
+black.png
+
+# Notes & logs
+head.txt
+desktop.ini

@@ -45,3 +45,11 @@ GIVE SOME LOVE TO NES DRAGON QUEST 3!
 7. Pad1 Select key is hotkey for Map
 8. if you want use macro for search and spell, you need to remap your controller and add start and select button of gamepad2 to your controller.
 9. Done
+
+------------------------------------------------------------------------------------
+
+### Release Notes v0.5.1
+- Fix `checkUnderworld` Phoenix/Lamia BGM tracking bug (`currentTrack == 31`)
+- Fix forest terrain check redundancy
+- Safe controller input handling and local scoping
+- Sync updated Lua script with HD pack package

@@ -1,4 +1,4 @@
-﻿-- 💡 우리가 찾아냈던 BGM 포인터 주소(0x78038 등)와 hires.txt의 트랙 번호를 연결합니다.
+-- 💡 우리가 찾아냈던 BGM 포인터 주소(0x78038 등)와 hires.txt의 트랙 번호를 연결합니다.
 local bgmTrackMap = {
     [0x8010] = 01,  -- Intro (intro + overture)
     [0x8028] = 07,  -- Castle
@@ -109,6 +109,9 @@ end
 -- =================================================================
 
 local currentTrack = emu.read(0x7C9, emu.memType.nesDebug, false)
+local currentBgm = nil
+local currentTrackAddress = nil
+local bgmName = nil
 local isUnderworld = 0 -- for Underworld Map
 local isField = 1 -- 전투 / 필드 구분
 
@@ -149,7 +152,7 @@ local HOLD_THRESHOLD = 40 -- 약 0.6초 (프레임 기준)
 
 local function checkInput()
     local input = emu.getInput(0)
-    local currentSelect = input.select
+    local currentSelect = input and input.select
 
     if currentSelect then
         -- 버튼을 누르고 있는 동안 타이머 증가
@@ -253,7 +256,7 @@ emu.addEventCallback(drawPlayerPosition, emu.eventType.endFrame)
 local currentMacro = nil -- 현재 실행 중인 매크로 ("search", "item", "magic")
 local macroTimeline = 0
 
-function handleStartOfFrame()
+local function handleStartOfFrame()
     -- 1. Port 2 입력 신호 감지
     local p2Input = emu.getInput(1)
  
@@ -530,7 +533,7 @@ local function checkBattleStatus()
 		elseif myTile == 7 then -- Poison Field
             emu.write(0x7C6, 6, emu.memType.nesDebug)
 
-        elseif myTile == 4 or myTile == 5 then -- 숲
+        elseif myTile == 4 then -- 숲
             emu.write(0x7C6, 2, emu.memType.nesDebug)
             
         elseif myTile == 0x13 then -- 블럭 바닥
@@ -593,7 +596,7 @@ local function checkUnderworld()
     	isUnderworld = 1
      	emu.write(0x7C8, 1, emu.memType.nesMemory)  -- Underworld
    	
-    elseif currentTrack == 9 or trackNum == 31 then
+    elseif currentTrack == 9 or currentTrack == 31 then
     	isUnderworld = 0
      	emu.write(0x7C8, 0, emu.memType.nesMemory)  -- Underworld
     	

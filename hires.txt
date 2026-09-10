@@ -1,0 +1,198 @@
+<ver>106
+<scale>2
+script=HdPacks.lua
+
+# 조건: CPU 메모리 $07C5 주소의 값이 01일 때 'ShowMap'이라는 조건을 참(True)으로 설정합니다.
+<condition>ShowMap1,memoryCheckConstant,07C5,==,01
+
+# 배경 출력: 'ShowMap' 조건이 만족될 때 minimap.png를 출력합니다.
+# 인자값: 이미지, 밝기(1.0), 가로스크롤(0), 세로스크롤(0), 우선순위(39 = 최상단 레이어)
+[ShowMap1]<background>minimap.png,1.0,0,0,39,0,0
+
+# 언더월드 미니맵 출력
+<condition>ShowMap2,memoryCheckConstant,07C5,==,02
+[ShowMap2]<background>minimap2.png,1.0,0,0,39,0,0
+
+
+#전투 후 배경 지우기
+<condition>Overworld,memoryCheckConstant,07C6,==,00
+[Overworld]<background>black.png,1.0,0,0,5,0,0
+
+
+#Underworld Shadowmask
+<condition>UnderworldShadow,memoryCheckConstant,07C8,==,01
+[UnderworldShadow]<background>backdrop_shadowmask3.png,1.0,0,0,7,0,0
+
+#Night Time Shadowmask
+<condition>NightShadow,memoryCheckConstant,07C9,==,01
+[NightShadow]<background>backdrop_shadowmask5.png,1.0,0,0,7,0,0
+
+
+#평지/산 전투
+<condition>Inbattle1,memoryCheckConstant,07C6,==,01
+[Inbattle1]<background>backdrop_field.png,1.0,0,0,5,0,0
+[Inbattle1]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#숲 전투
+<condition>Inbattle2,memoryCheckConstant,07C6,==,02
+[Inbattle2]<background>backdrop_forest.png,1.0,0,0,5,0,0
+[Inbattle2]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#사막 전투
+<condition>Inbattle3,memoryCheckConstant,07C6,==,03
+[Inbattle3]<background>backdrop_desert.png,1.0,0,0,5,0,0
+[Inbattle3]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#바다 전투
+<condition>Inbattle4,memoryCheckConstant,07C6,==,04
+[Inbattle4]<background>backdrop_sea.png,1.0,0,0,5,0,0
+[Inbattle4]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#산 전투
+<condition>Inbattle5,memoryCheckConstant,07C6,==,05
+[Inbattle5]<background>backdrop_mountain.png,1.0,0,0,5,0,0
+[Inbattle5]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#포이즌 필드 전투
+<condition>Inbattle6,memoryCheckConstant,07C6,==,06
+[Inbattle6]<background>backdrop_poisionfield.png,1.0,0,0,5,0,0
+[Inbattle6]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#눈밭 전투
+<condition>Inbattle7,memoryCheckConstant,07C6,==,07
+[Inbattle7]<background>backdrop_snow.png,1.0,0,0,5,0,0
+[Inbattle7]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#동굴 전투
+<condition>Inbattle8,memoryCheckConstant,07C6,==,08
+[Inbattle8]<background>backdrop_cave.png,1.0,0,0,5,0,0
+[Inbattle8]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#타워 전투
+<condition>Inbattle9,memoryCheckConstant,07C6,==,09
+[Inbattle9]<background>backdrop_tower.png,1.0,0,0,5,0,0
+[Inbattle9]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#피라미드 전투
+<condition>Inbattle10,memoryCheckConstant,07C6,==,0A
+[Inbattle10]<background>backdrop_pyramid.png,1.0,0,0,5,0,0
+[Inbattle10]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#유령선 전투
+<condition>Inbattle11,memoryCheckConstant,07C6,==,0B
+[Inbattle11]<background>backdrop_phantomship.png,1.0,0,0,5,0,0
+[Inbattle11]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#구름 전투
+<condition>Inbattle12,memoryCheckConstant,07C6,==,0C
+[Inbattle12]<background>backdrop_cloud.png,1.0,0,0,5,0,0
+[Inbattle12]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#Cloud 전투
+<condition>Inbattle13,memoryCheckConstant,07C6,==,0D
+[Inbattle13]<background>backdrop_cloud.png,1.0,0,0,5,0,0
+[Inbattle13]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#Dungeon
+<condition>Inbattle14,memoryCheckConstant,07C6,==,0E
+[Inbattle14]<background>backdrop_dungeon.png,1.0,0,0,5,0,0
+[Inbattle14]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#Monster Arena
+<condition>Inbattle15,memoryCheckConstant,07C6,==,0F
+[Inbattle15]<background>backdrop_monster_arena.png,1.0,0,0,5,0,0
+[Inbattle15]<background>backdrop_shadowmask2.png,1.0,0,0,6,0,0
+
+#Jipang
+<condition>Inbattle16,memoryCheckConstant,07C6,==,10
+[Inbattle16]<background>backdrop_jipang_orochi.png,1.0,0,0,5,0,0
+[Inbattle16]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#JipangCave
+<condition>Inbattle16,memoryCheckConstant,07C6,==,11
+[Inbattle16]<background>backdrop_cave_4.png,1.0,0,0,5,0,0
+[Inbattle16]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#Zoma Castle
+<condition>Inbattle17,memoryCheckConstant,07C6,==,12
+[Inbattle17]<background>backdrop_zoma_castle.png,1.0,0,0,5,0,0
+[Inbattle17]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#Zoma
+<condition>Inbattle18,memoryCheckConstant,07C6,==,13
+[Inbattle18]<background>backdrop_zoma.png,1.0,0,0,5,0,0
+[Inbattle18]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#Baramos Castle
+<condition>Inbattle18,memoryCheckConstant,07C6,==,14
+[Inbattle18]<background>backdrop_baramos_dungeon.png,1.0,0,0,5,0,0
+[Inbattle18]<background>backdrop_shadowmask.png,1.0,0,0,6,0,0
+
+#Dungeon Solo
+<condition>Inbattle19,memoryCheckConstant,07C6,==,15
+[Inbattle19]<background>backdrop_dungeon.png,1.0,0,0,5,0,0
+[Inbattle19]<background>backdrop_shadowmask4.png,1.0,0,0,6,0,0
+
+
+# [Inbattle]<background>backdrop_battle.png,1.0,0,0,6,0,0
+
+# ==========================================
+# 드래곤 퀘스트 3 snes_bgm 오디오 트랙 매핑
+# 문법: <bgm>앨범번호,트랙번호,파일명.ogg
+# ==========================================
+<bgm>0,1,01 Dragon Quest 3 - Intro ~ Overture.ogg
+<bgm>0,2,02 Dragon Quest 3 - Intermezzo.ogg
+<bgm>0,3,03 Dragon Quest 3 - Prologue.ogg
+<bgm>0,4,04 Dragon Quest 3 - Distant Memories.ogg
+<bgm>0,5,05 Dragon Quest 3 - Town.ogg
+<bgm>0,6,06 Dragon Quest 3 - Night Town.ogg
+<bgm>0,7,07 Dragon Quest 3 - Castle ~ Rondo.ogg
+<bgm>0,8,08 Dragon Quest 3 - Night Castle.ogg
+<bgm>0,9,09 Dragon Quest 3 - Adventure.ogg
+<bgm>0,10,10 Dragon Quest 3 - Battle Theme.ogg
+<bgm>0,11,11 Dragon Quest 3 - Requiem.ogg
+<bgm>0,12,12 Dragon Quest 3 - Dungeon.ogg
+<bgm>0,13,13 Dragon Quest 3 - Village.ogg
+<bgm>0,14,14 Dragon Quest 3 - Night Village.ogg
+<bgm>0,15,15 Dragon Quest 3 - Tower.ogg
+<bgm>0,16,16 Dragon Quest 3 - Small Shrine.ogg
+<bgm>0,17,17 Dragon Quest 3 - Boogie-Woogie.ogg
+<bgm>0,18,18 Dragon Quest 3 - Rolling Dice.ogg
+<bgm>0,19,19 Dragon Quest 3 - Sleeping Village.ogg
+<bgm>0,20,20 Dragon Quest 3 - Wake Up Powder.ogg
+<bgm>0,21,21 Dragon Quest 3 - Pyramid.ogg
+<bgm>0,22,22 Dragon Quest 3 - Sailing.ogg
+<bgm>0,23,23 Dragon Quest 3 - Jipang.ogg
+<bgm>0,24,24 Dragon Quest 3 - The Palace of Himiko.ogg
+<bgm>0,25,25 Dragon Quest 3 - The Phantom Ship.ogg
+<bgm>0,26,26 Dragon Quest 3 - The Song of Sadness.ogg
+<bgm>0,27,27 Dragon Quest 3 - Memories of Love 1.ogg
+<bgm>0,28,28 Dragon Quest 3 - Memories of Love 2.ogg
+<bgm>0,29,29 Dragon Quest 3 - The Reverie of Phoenix 1.ogg
+<bgm>0,30,30 Dragon Quest 3 - The Reverie of Phoenix 2.ogg
+<bgm>0,31,31 Dragon Quest 3 - Heavenly Flight.ogg
+<bgm>0,32,32 Dragon Quest 3 - The Archfiend's Castle.ogg
+<bgm>0,33,33 Dragon Quest 3 - Gruelling Fight.ogg
+<bgm>0,34,34 Dragon Quest 3 - Unknown World.ogg
+<bgm>0,35,35 Dragon Quest 3 - Town of Alefgard.ogg
+<bgm>0,36,36 Dragon Quest 3 - Chateau Ladutorm.ogg
+<bgm>0,37,37 Dragon Quest 3 - Dungeon of Alefgard.ogg
+<bgm>0,38,38 Dragon Quest 3 - Fairy Flute.ogg
+<bgm>0,39,39 Dragon Quest 3 - Rainbow Bridge.ogg
+<bgm>0,40,40 Dragon Quest 3 - Hero's Challenge.ogg
+<bgm>0,41,41 Dragon Quest 3 - The Light Returns.ogg
+<bgm>0,42,42 Dragon Quest 3 - Into the Legend.ogg
+<bgm>0,43,43 Dragon Quest 3 - Victory.ogg
+<bgm>0,44,44 Dragon Quest 3 - Level Up!.ogg
+<bgm>0,45,45 Dragon Quest 3 - Wayfarer's Inn.ogg
+<bgm>0,46,46 Dragon Quest 3 - Save.ogg
+<bgm>0,47,47 Dragon Quest 3 - Church.ogg
+<bgm>0,48,48 Dragon Quest 3 - Special Item.ogg
+<bgm>0,49,49 Dragon Quest 3 - Cursed.ogg
+<bgm>0,50,50 Dragon Quest 3 - Fanfare 1.ogg
+<bgm>0,51,51 Dragon Quest 3 - Fanfare 2.ogg
+<bgm>0,52,52 Dragon Quest 3 - Fanfare 3.ogg
+<bgm>0,53,53 Dragon Quest 3 - Echoing Flute.ogg
+<bgm>0,54,54 Dragon Quest 3 - Echoing Flute (Echo).ogg
+<bgm>0,55,55 Dragon Quest 3 - Silver Harp.ogg
+<bgm>0,56,56 Dragon Quest 3 - volume-0.ogg
